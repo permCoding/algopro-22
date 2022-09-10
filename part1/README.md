@@ -9,6 +9,7 @@
   
 >[Контрольные работы на Степике](https://stepik.org/64867/)  
 >[Лабораторки - ПРАКТИКУМ](https://pcoding.ru/pdf/PythonJunior.pdf)  
+>[Документация по библиотеке Turtle](https://docs-python.ru/standart-library/modul-turtle/)  
 >Некоторые видео:  
 >1 [Арифметические и побитовые операции](https://youtu.be/gsdyjDg4w-g)  
 >2 [Шаг первый в изучении Питона](https://youtu.be/Z4JoqD-vZJY)  

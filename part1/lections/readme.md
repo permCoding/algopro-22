@@ -1,11 +1,11 @@
-примеры программ с Лекций  
+# примеры программ с Лекций  
 
-
-[ссылка на первую программу](https://replit.com/@pCoding/first-program#main.py)  
+### Лекция 1  
+https://replit.com/@pCoding/lection-01  
 
 
 ### Лекция 2  
-https://replit.com/@pCoding/examle-01  
+https://replit.com/@pCoding/lection-02  
 
 ---  
 

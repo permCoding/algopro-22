@@ -1,0 +1,16 @@
+<!DOCTYPE AFC>
+<algorithm version="1.2">
+  <branch>
+    <io vars="dec"/>
+    <assign dest="bin" src="&quot;&quot;"/>
+    <assign dest="base" src="2"/>
+    <pre cond="dec > 0">
+      <branch>
+        <assign dest="mod" src="dec % base"/>
+        <assign dest="div" src="dec // base"/>
+        <assign dest="bin" src="str(mod) + bin"/>
+      </branch>
+    </pre>
+    <ou vars="bin"/>
+  </branch>
+</algorithm>

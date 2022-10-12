@@ -11,8 +11,4 @@ print(chr(34) * 9)
 
 # s = "wljjnf - wewe. ?"
 
-# s.re
-
-
-
 # PEP8

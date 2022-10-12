@@ -18,7 +18,7 @@
 [СЕМЕСТР 2](https://github.com/permCoding/algopro-22/blob/master/part2/)  
 
 > [Рейтинг группы ПИб-1](https://docs.google.com/spreadsheets/d/1yUvWb0rE2ko-nBnV_a06paKiC4ZWEMi7_ZLK0oT7NFY/edit?usp=sharing)  
-> [Стандарт PEP 8 по оформлению кода на Python](https://pythonworld.ru/osnovy/pep-8-rukovodstvo-po-napisaniyu-koda-na-python.html)  
+> [Стандарт PEP 8 по оформлению кода на Python - Python Enhancement Proposal](https://pythonworld.ru/osnovy/pep-8-rukovodstvo-po-napisaniyu-koda-na-python.html)  
 
 ### Дистанционные занятия тут:  
 * [сервер BBB6](https://bbb6.psaa.ru/b/j46-s4j-srl-tn2)  

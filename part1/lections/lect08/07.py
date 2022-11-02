@@ -2,11 +2,11 @@ from os import system
 
 
 def get_lines(name_file):
-    f = open(name_file)
     lines = []
-    for line in f:
-        lines.append(line.strip())
-    f.close()
+    with open(name_file) as f:
+        # lines = f.readlines()
+        for line in f:
+            lines.append(line.strip())
     return lines
 
 

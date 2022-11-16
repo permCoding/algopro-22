@@ -19,4 +19,5 @@ def get_tuples_map(lines):
 
 lines = get_lines('./txt/data.txt')
 tuples = get_tuples_map(lines)
-print(tuples)
+for elm in sorted(tuples, key=lambda x: x[0]):
+    print(elm[0].ljust(9, ' '), elm[1])

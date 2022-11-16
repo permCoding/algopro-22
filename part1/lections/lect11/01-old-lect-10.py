@@ -23,7 +23,7 @@ def get_gen(num):
     return sum([int(smb) for smb in lst])
 
 
-def get_filter(num):
+def get_filter_while(num):
     """ найти сумму нечётных элементов """
     res = 0
     while num > 0:
@@ -33,13 +33,25 @@ def get_filter(num):
     return res
 
 
-# обычным циклом
-# через filter
-# через generator
+def get_filter_func(num):
+    """ найти сумму нечётных элементов """
+    def odd(x):
+        return x%2 > 0
+    
+    nums = map(int, str(num))
+    return sum(filter(odd, nums))
 
 
-num = 123045
+def get_filter(num):
+    """ найти сумму нечётных цифр в числе """
+    return sum(filter(lambda x: x%2 > 0, map(int, str(num))))
+
+
+num = 120398045
 print(get_ariphm(num))
 print(get_str(num))
 print(get_map(num))
 print(get_gen(num))
+print(get_filter_while(num))
+print(get_filter_func(num))
+print(get_filter(num))

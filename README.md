@@ -18,6 +18,7 @@
 [СЕМЕСТР 2](https://github.com/permCoding/algopro-22/blob/master/part2/)  
 
 > [Рейтинг группы ПИб-1](https://docs.google.com/spreadsheets/d/1yUvWb0rE2ko-nBnV_a06paKiC4ZWEMi7_ZLK0oT7NFY/edit?usp=sharing)  
+> [Стандарт PEP 8 - первоисточник, Предложения по улучшению Python](https://peps.python.org/pep-0008/)  
 > [Стандарт PEP 8 по оформлению кода на Python - Python Enhancement Proposal](https://pythonworld.ru/osnovy/pep-8-rukovodstvo-po-napisaniyu-koda-na-python.html)  
 > [Как расшарить приватный репозиторий](https://pcoding.ru/pdf/shareGit.pdf)  
 

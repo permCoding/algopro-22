@@ -11,7 +11,7 @@ def sort_select(arr):
         for i in range(n):
             if arr[i] > arr[ind_max]:
                 ind_max = i
-        arr[ind_max], arr[-1] = arr[n-1], arr[ind_max]
+        arr[ind_max], arr[n-1] = arr[n-1], arr[ind_max]
     return arr
 
 

@@ -1,6 +1,7 @@
 # algopro-22
 **Алгоритмизация и программирование**  
 **БЕЛЯКОВ Андрей Юрьевич**  
+[![telegram](https://pcoding.ru/ico/telegram.png)](https://t.me/AndreyPerm)  
 
 ---  
 

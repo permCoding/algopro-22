@@ -1,6 +1,7 @@
 import parsing as p
 
 
+# ДОДЕЛАТЬ - вырезать тело таблицы: '<table class="results-table' : </table>'
 def get_data(html):
     lst = []
     pos = 0

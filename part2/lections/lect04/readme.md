@@ -27,6 +27,8 @@ pref = "https://pgsha.ru"
 1) while  
 2) bs4  
 3) re  
+4) selenim  
+5) scrapy  
 
 ---  
 

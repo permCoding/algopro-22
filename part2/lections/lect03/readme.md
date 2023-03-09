@@ -23,3 +23,16 @@ https://www.championat.com/hockey/_superleague/tournament/5077/table/#all
 https://pgsha.ru/today/  
 
 ---  
+
+парсим:  
+- циклом while  
+- bs4  
+- re  
+- selenium  
+- scrapy  
+сохраняем:  
+- txt  
+- csv (for, csv, pandas)  
+- json  
+- excel  
+- sqlite  

@@ -30,6 +30,8 @@
 
 ---  
 
+[Структуры данных в Python](https://docs.python.org/3/tutorial/datastructures.html)  
+
 ```txt
 * как установить в linux pip
 sudo apt update

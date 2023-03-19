@@ -1,9 +1,31 @@
 ## bs4
 
+links:  
+0) тестовый пример с разбором bs4  
+1) сложная таблица -  
+https://www.championat.com/hockey/_superleague/tournament/5077/table/#all  
+2) паджинация -  
+https://www.chitai-gorod.ru/catalog/books/nauchnaya-fantastika-9693?page=1  
+3) скроллинг на странице с подгрузкой данных динамически -  
+https://scrapingclub.com/exercise/list_infinite_scroll/  
+
 ### Библиотека для парсера данных из html разметки  
+
+Методы:  
+- .find() .find_all()  
+- .find_parent() .find_parents()  
+- .find_next_sibling() .find_previous_sibling()  
+- .find_next_siblings() .find_previous_siblings()  
+- .next_element .previous_element  
+- .next_elements .previous_elements  
+- .get() dict  
+- import re: soup.find_all(text=re.compile(ptn))  
+
+---  
 
 Документация:  
 https://beautiful-soup-4.readthedocs.io/en/latest/  
+https://www.crummy.com/software/BeautifulSoup/bs4/doc.ru/bs4ru.html  
 
 **Установить библиотеку и создать объект:**  
 
@@ -14,7 +36,7 @@ soup = BeautifulSoup(src, "lxml")  # pip install lxml
 soup = BeautifulSoup(src, "html.parser")  # уже есть
 ```
 
-**1) найти тег, тег по классу, по id**  
+**1) найти тег или все теги, найти по классу, по id**  
 - .find()  
 - .find_all()  
 
@@ -92,7 +114,7 @@ for link in links:
     link_href_attr = link["href"]
 ```
 
-**6) re**  
+**6) найти тег по содержанию с помощью re**  
 
 find_a_by_text = soup.find("a", text="Одежда")
 find_a_by_text = soup.find("a", text="Одежда для взрослых")

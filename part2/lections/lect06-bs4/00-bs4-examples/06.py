@@ -1,5 +1,4 @@
 from bs4 import BeautifulSoup
-import re
 
 html = """
 <div class="prod__info">
@@ -8,7 +7,7 @@ html = """
     </div>
     <div class="prod__price clr news">
         <span>Стоимость:</span>
-        <span>22500 руб</span>
+        <span>    22500 руб    </span>
         <span>52500 руб.</span>
         <span>42500 Руб.</span>
         <span>2150 р.</span>
@@ -26,4 +25,4 @@ tags = soup \
     .find('div', { 'class': 'prod__price'}) \
     .find_all('span')[1:]  # без заголовка
 for tag in sorted(tags, key=lambda e: int(e.text.strip().split()[0])):
-    print(tag.text)
+    print(tag.text.strip())

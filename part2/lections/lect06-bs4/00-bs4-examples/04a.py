@@ -2,7 +2,7 @@ from bs4 import BeautifulSoup
 
 html = """
 <div class="prod__info">
-    <div id="prodname">
+    <div class="prod__name" id="prodname">
         <span>ZenFone 3 Deluxe Oreo</span>
     </div>
     <div class="prod__price">
@@ -22,15 +22,9 @@ html = """
 
 soup = BeautifulSoup(html, "html.parser")
 
-# найти все теги по функции
-def div_and_class(tag):
-    """у тега есть атрибут класс"""
-    u1 = tag.name == 'div'
-    u2 = tag.has_attr('class')
-    return u1 and u2
+# найти все теги по функции - только заголовки
 tags = soup \
     .find('div', class_='prod__info') \
-    .find_all(div_and_class)
+    .find_all('div')[1:]
 for tag in tags:
-    print(tag.find('span').text.strip())
-
+    print(tag.find_all('span')[0].text.strip())

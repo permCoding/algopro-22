@@ -20,11 +20,12 @@ soup = BeautifulSoup(html, "html.parser")
 
 # найти первый тег с указанным классом
 prod = soup.find('div', class_='prod__info')
-# найти первый тег div с указанным классом
-prod = soup.find('div', class_='prod__info')
+
 # найти первый тег div с указанным классом
 prod = soup.find('div', { 'class': 'prod__info' })
+
 # найти первый тег div с указанным id
 prodname = prod.find('div', id='prodname').text.strip()
+
 # найти первый тег div с указанным классом и id
 prodname = prod.find('div', {'id':'prodname', 'class':'prod__name'}).text.strip()

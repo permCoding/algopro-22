@@ -4,7 +4,7 @@ import re
 html = """
 <div>
     <div>
-        <span>ZenFone 3 Deluxe Oreo</span>
+        <span>    ZenFone 3 Deluxe Oreo</span>
     </div>
     <div class="prod__price">
         <span id="price__title">Стоимость:</span>

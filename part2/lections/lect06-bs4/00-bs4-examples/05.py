@@ -10,7 +10,7 @@ html = """
         <span>Стоимость:</span>
         <span>22500 руб</span>
         <span>32500 руб.</span>
-        <span>42500 Руб.</span>
+        <span>42500     Руб.</span>
     </div>
     <div class="prod__country">
         <span class="country__label">Страна производитель:</span>
@@ -27,5 +27,5 @@ print('- - - - -')
 tags = soup.find_all('span', string=re.compile('Руб.'))
 for tag in tags: print(tag.text)
 print('- - - - -')
-tags = soup.find_all('span', string=re.compile('.*Руб\.?', re.I))
+tags = soup.find_all('span', string=re.compile('.*руб\.?', re.I))
 for tag in tags: print(tag.text)

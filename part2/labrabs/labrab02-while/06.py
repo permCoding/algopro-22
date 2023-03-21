@@ -5,9 +5,9 @@ def get_html(url):
     ua = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36"    
     }
-    obr = requests.get(url, headers=ua)
-    obr.encoding = "utf8"
-    return obr.text
+    res = requests.get(url, headers=ua)
+    res.encoding = "utf8"
+    return res.text
 
 
 def get_link(html, pos=0):
@@ -19,14 +19,17 @@ def get_link(html, pos=0):
 
 def get_links(html):
     lst = []
-    a, b = '<a class="links" href="', '" target='
+    a = '<a class="links" href="'
     pos = 0
     while html.find(a, pos) > -1:
+        
+        a, b = '<a class="links" href="', '" target='
         posa = html.find(a, pos) + len(a)
         posb = html.find(b, posa)
-        lst.append(html[posa: posb])
         
+        lst.append(html[posa: posb])
         pos = posb
+    
     return lst
 
 
@@ -41,10 +44,10 @@ def write_txt(filename, lines):
 
 url = "https://pcoding.ru/darkNet.php"
 
-html = get_html(url)
-links = get_links(html)
-filtred = get_filtred(links, '.pdf')
-write_txt('filtred.txt', filtred)
+html = get_html(url)  # получить html
+links = get_links(html)  # выбрать ссылки
+filtred = get_filtred(links, '.pdf')  # отфильтровать только pdf-документы
+write_txt('filtred.txt', filtred)  # записать в файл
 
 """
 - доделать чтобы сохранялись ещё и названия документов

@@ -11,11 +11,11 @@ trs = soup \
     .find('div') \
     .find('table') \
     .find('tbody') \
-    .find_all('tr')
+    .find_all('tr')  # найдём все строки таблицы
 
 teams = []
-for tr in trs:
-    tds = tr.find_all('td')
+for tr in trs:  # переберём все строки
+    tds = tr.find_all('td')  # найдём все ячейки в строке
     i = tds[0].text.strip()
     name = tds[1].text.strip()
     balls = tds[9].text.strip()

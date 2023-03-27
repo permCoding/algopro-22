@@ -2,9 +2,10 @@ from bs4 import BeautifulSoup
 import json
 from time import sleep
 from parsing import get_html
+from random import randint as rnd
 
 
-def get_books(html):
+def get_books_on_page(html):  # получить книги на одной странице
     soup = BeautifulSoup(html, 'html.parser')
     prods = soup.find_all('article')
     books = []
@@ -21,22 +22,31 @@ def get_books(html):
 def get_all_books(count=0):
     all_books = []
     page = 0
-    sleep(1)
+    sleep(rnd(1,5))
     while True:
         page += 1
         if count!=0 and page>count: break
-        print(page)
-        url = f"https://www.chitai-gorod.ru/catalog/books/nauchnaya-fantastika-9693?page={page}"
+        
+        order = 'desc'
+        
+        base_url = 'https://www.chitai-gorod.ru'
+        cat = '/catalog/books/nauchnaya-fantastika-9693'
+        # params = f'?page={page}'
+        params = f'?sort=price&order={order}&page={page}'
+        url = base_url + cat + params
+        
+        print(f'page={page}', url)
+        
         try:
             html = get_html(url)
-            lst = get_books(html)
+            lst = get_books_on_page(html)
             all_books.extend(lst)
         except:
-            pass
+            print(f'Ошибки на странице - {page}')
     return all_books
 
     
-def write_json(filename, lst):
+def write_to_json(filename, lst):
     def get_dict(i, e):
         name_columns = ['id', 'head', 'author', 'price', 'ref']
         values = [i+1] + e
@@ -47,8 +57,8 @@ def write_json(filename, lst):
         json.dump(lst_w, f, indent=4, ensure_ascii=False)
 
 
-all_books = get_all_books(3)
-write_json('all_books_3.json', all_books)
+all_books = get_all_books(count=2)
+write_to_json('all_books.json', all_books)
 
 """
 

@@ -22,7 +22,7 @@ fig.set_figwidth(5)  # ширина окна
 fig.set_figheight(5)  # высота окна
 
 ax.set_xticks(x)
-steps_y = [step for step in range(min(y)//10*10, (max(y)//10+1)*10, 10)]
+steps_y = [step for step in range(min(y)//10*10-30, (max(y)//10)*10+30, 10)]
 ax.set_yticks(steps_y)
 
 plt.show()

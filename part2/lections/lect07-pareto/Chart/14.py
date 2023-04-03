@@ -12,8 +12,10 @@ x, step = left, (right - left) / count
 lst_x, lst_y = [x], [func(x)]
 while x < right:
     x += step
-    lst_x.append(x)
-    lst_y.append(func(x))
+    if True: # если значение не существует то не доб. в список
+        lst_x.append(x)
+        lst_y.append(func(x))
+    # или использовать try:
 
 fig, axes = plt.subplots()
 axes.vlines(0, min(lst_y), max(lst_y), color='orange', lw=2)

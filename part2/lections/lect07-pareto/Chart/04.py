@@ -12,13 +12,13 @@ pairs = [get() for _ in range(1000)]
 y = [pairs.count(num) for num in x]
 
 # цвет в 16-ти-ричной СС и размер радиуса
-plt.scatter(x, y, c='#000088', s=3)
+plt.scatter(x, y, c='#000088', s=23)
 
 ax.set_facecolor('#aaeebb')
 ax.set_title('Распределение')
 
 # можно задать пропорцию сторон окна
 fig.set_figwidth(8)  # ширина окна
-fig.set_figheight(3)  # высота окна
+fig.set_figheight(2)  # высота окна
 
 plt.show()

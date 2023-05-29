@@ -7,7 +7,7 @@ img = Image.open("./images/белка.jpg")
 
 width, height = img.size
 
-count, i = 0, 9000
+count, i = 9000, 0
 while i < count:
     i += 1
     cur_x = randint(0, width-1)

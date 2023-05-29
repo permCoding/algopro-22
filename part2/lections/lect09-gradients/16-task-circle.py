@@ -1,6 +1,5 @@
 # понизим яркость у заданного количества пикселей
 
-from itertools import count
 from PIL import Image
 from random import randint
 
@@ -8,7 +7,7 @@ img = Image.open("./images/белка.jpg")
 
 width, height = img.size
 
-count, i = 9000, 0
+count, i = 0, 9000
 while i < count:
     i += 1
     cur_x = randint(0, width-1)
